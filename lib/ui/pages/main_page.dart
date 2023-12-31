@@ -31,6 +31,7 @@ class MainPage extends StatelessWidget {
             BuildPushList(
                 routeAddr: '/orientationBuilderPage',
                 titleText: 'orientationBuilderPage'),
+            BuildPushList(routeAddr: '/themePage', titleText: 'themePage'),
           ],
         ),
       ),
