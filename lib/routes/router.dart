@@ -6,6 +6,7 @@ import 'package:my_flutter_freshman/ui/pages/main_page.dart';
 import 'package:my_flutter_freshman/ui/pages/navigation_drawer_page.dart';
 import 'package:my_flutter_freshman/ui/pages/orientation_builder_page.dart';
 import 'package:my_flutter_freshman/ui/pages/snakbar_page.dart';
+import 'package:my_flutter_freshman/ui/pages/tab_controller_page.dart';
 import 'package:my_flutter_freshman/ui/pages/theme_page.dart';
 
 final GoRouter router = GoRouter(routes: [
@@ -49,6 +50,12 @@ final GoRouter router = GoRouter(routes: [
     path: '/themePage',
     builder: (BuildContext context, GoRouterState state) {
       return const ThemePage();
+    },
+  ),
+  GoRoute(
+    path: '/tabControllerPage',
+    builder: (BuildContext context, GoRouterState state) {
+      return const TabControllerPage();
     },
   ),
 ]);
