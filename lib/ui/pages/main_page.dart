@@ -28,6 +28,9 @@ class MainPage extends StatelessWidget {
                 titleText: 'navigationDrawerPage'),
             BuildPushList(
                 routeAddr: '/snackbarPage', titleText: 'snackbarPage'),
+            BuildPushList(
+                routeAddr: '/orientationBuilderPage',
+                titleText: 'orientationBuilderPage'),
           ],
         ),
       ),
