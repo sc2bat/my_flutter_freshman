@@ -30,4 +30,10 @@ final GoRouter router = GoRouter(routes: [
       return const NavigationDrawerPage();
     },
   ),
+  GoRoute(
+    path: '/snakbarPage',
+    builder: (BuildContext context, GoRouterState state) {
+      return const NavigationDrawerPage();
+    },
+  ),
 ]);
