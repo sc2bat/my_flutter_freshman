@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:my_flutter_freshman/ui/pages/animated_container_page.dart';
 import 'package:my_flutter_freshman/ui/pages/animated_opacity_page.dart';
+import 'package:my_flutter_freshman/ui/pages/form_validation_page.dart';
 import 'package:my_flutter_freshman/ui/pages/main_page.dart';
 import 'package:my_flutter_freshman/ui/pages/navigation_drawer_page.dart';
 import 'package:my_flutter_freshman/ui/pages/orientation_builder_page.dart';
@@ -56,6 +57,12 @@ final GoRouter router = GoRouter(routes: [
     path: '/tabControllerPage',
     builder: (BuildContext context, GoRouterState state) {
       return const TabControllerPage();
+    },
+  ),
+  GoRoute(
+    path: '/formValidationPage',
+    builder: (BuildContext context, GoRouterState state) {
+      return const FormValidationPage();
     },
   ),
 ]);
