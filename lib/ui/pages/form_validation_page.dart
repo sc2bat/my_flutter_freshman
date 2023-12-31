@@ -15,6 +15,24 @@ class _FormValidationPageState extends State<FormValidationPage> {
 
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _ageController = TextEditingController();
+
+  FocusNode ageFocusNode = FocusNode();
+
+  @override
+  void initState() {
+    super.initState();
+    ageFocusNode = FocusNode();
+  }
+
+  @override
+  void dispose() {
+    _nameController.dispose();
+    _emailController.dispose();
+    _ageController.dispose();
+    ageFocusNode.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -85,6 +103,50 @@ class _FormValidationPageState extends State<FormValidationPage> {
                   },
                   child: const Icon(
                     Icons.done,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: TextField(
+                  controller: _ageController,
+                  autofocus: true,
+                  decoration: const InputDecoration(
+                    hintText: 'age',
+                    border: InputBorder.none,
+                    labelText: '나이',
+                  ),
+                  focusNode: ageFocusNode,
+                  onChanged: (value) => logger.info(value),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ElevatedButton(
+                  onPressed: () {
+                    FocusScope.of(context).requestFocus(ageFocusNode);
+                  },
+                  child: const Icon(
+                    Icons.view_agenda,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ElevatedButton(
+                  onPressed: () {
+                    logger.info('qwerasdf ${_ageController.text}');
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          content: Text(_ageController.text),
+                        );
+                      },
+                    );
+                  },
+                  child: const Icon(
+                    Icons.ac_unit_rounded,
                   ),
                 ),
               ),
