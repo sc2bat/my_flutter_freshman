@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class Sample extends StatefulWidget {
-  const Sample({super.key, required this.title});
-
-  final String title;
+  const Sample({
+    super.key,
+  });
 
   @override
   State<Sample> createState() => _SampleState();
@@ -18,7 +18,7 @@ class _SampleState extends State<Sample> {
         title: const Text('qwerasdf'),
       ),
       body: const Center(
-        child: Text('qwerasdf'),
+        child: Text('qwerasdfqwerasdf'),
       ),
     );
   }

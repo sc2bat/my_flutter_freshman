@@ -4,6 +4,7 @@ import 'package:my_flutter_freshman/ui/pages/animated_container_page.dart';
 import 'package:my_flutter_freshman/ui/pages/animated_opacity_page.dart';
 import 'package:my_flutter_freshman/ui/pages/main_page.dart';
 import 'package:my_flutter_freshman/ui/pages/navigation_drawer_page.dart';
+import 'package:my_flutter_freshman/ui/pages/snakbar_page.dart';
 
 final GoRouter router = GoRouter(routes: [
   GoRoute(
@@ -31,9 +32,9 @@ final GoRouter router = GoRouter(routes: [
     },
   ),
   GoRoute(
-    path: '/snakbarPage',
+    path: '/snackbarPage',
     builder: (BuildContext context, GoRouterState state) {
-      return const NavigationDrawerPage();
+      return const SnackbarPage();
     },
   ),
 ]);

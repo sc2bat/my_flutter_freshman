@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:my_flutter_freshman/logger/logger.dart';
 
-class SnakbarPage extends StatefulWidget {
-  const SnakbarPage({super.key, required this.title});
-
-  final String title;
+class SnackbarPage extends StatefulWidget {
+  const SnackbarPage({super.key});
 
   @override
-  State<SnakbarPage> createState() => _SnakbarPageState();
+  State<SnackbarPage> createState() => _SnackbarPageState();
 }
 
-class _SnakbarPageState extends State<SnakbarPage> {
+class _SnackbarPageState extends State<SnackbarPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,8 +16,25 @@ class _SnakbarPageState extends State<SnakbarPage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: const Text('qwerasdf'),
       ),
-      body: const Center(
-        child: Text('qwerasdf'),
+      body: Builder(
+        builder: (context) => Center(
+          child: ElevatedButton(
+            onPressed: () {
+              final snackBar = SnackBar(
+                content: const Text('SnackBar~~'),
+                action: SnackBarAction(
+                    label: 'cancel',
+                    onPressed: () {
+                      logger.info('qwerasdf snackbar cancel');
+                    }),
+              );
+              ScaffoldMessenger.of(context).showSnackBar(snackBar);
+            },
+            child: const Text(
+              'show Snackbar',
+            ),
+          ),
+        ),
       ),
     );
   }
