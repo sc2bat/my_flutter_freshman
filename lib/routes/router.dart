@@ -7,6 +7,7 @@ import 'package:my_flutter_freshman/ui/pages/form_validation_page.dart';
 import 'package:my_flutter_freshman/ui/pages/main_page.dart';
 import 'package:my_flutter_freshman/ui/pages/navigation_drawer_page.dart';
 import 'package:my_flutter_freshman/ui/pages/orientation_builder_page.dart';
+import 'package:my_flutter_freshman/ui/pages/slide_screen_page.dart';
 import 'package:my_flutter_freshman/ui/pages/snakbar_page.dart';
 import 'package:my_flutter_freshman/ui/pages/tab_controller_page.dart';
 import 'package:my_flutter_freshman/ui/pages/theme_page.dart';
@@ -70,6 +71,12 @@ final GoRouter router = GoRouter(routes: [
     path: '/dissmissiblePage',
     builder: (BuildContext context, GoRouterState state) {
       return const DissmissiblePage();
+    },
+  ),
+  GoRoute(
+    path: '/slideScreenPage',
+    builder: (BuildContext context, GoRouterState state) {
+      return const SlideScreenPage();
     },
   ),
 ]);
