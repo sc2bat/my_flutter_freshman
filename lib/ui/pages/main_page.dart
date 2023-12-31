@@ -38,6 +38,8 @@ class MainPage extends StatelessWidget {
             BuildPushList(
                 routeAddr: '/formValidationPage',
                 titleText: 'FormValidationPage'),
+            BuildPushList(
+                routeAddr: '/DissmissiblePage', titleText: 'DissmissiblePage'),
           ],
         ),
       ),
