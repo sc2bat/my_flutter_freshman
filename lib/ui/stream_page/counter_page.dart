@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rxdart/rxdart.dart';
 
 class CounterPage extends StatefulWidget {
   const CounterPage({
@@ -11,6 +12,7 @@ class CounterPage extends StatefulWidget {
 
 class _CounterPageState extends State<CounterPage> {
   int _counter = 0;
+  final counterSubject = BehaviorSubject<int>();
 
   @override
   Widget build(BuildContext context) {
@@ -26,17 +28,27 @@ class _CounterPageState extends State<CounterPage> {
             ElevatedButton(
               onPressed: () {
                 setState(() {
-                  _counter++;
+                  // _counter++;
+                  counterSubject.add(++_counter);
                 });
               },
               child: const Text('add'),
             ),
-            Text(
-              '$_counter',
-              style: const TextStyle(
-                fontSize: 32.0,
-              ),
-            ),
+            StreamBuilder<int>(
+                stream: counterSubject.stream,
+                initialData: 0,
+                builder: (context, snapshot) {
+                  if (!snapshot.hasData) {
+                    return const CircularProgressIndicator();
+                  } else {
+                    return Text(
+                      '${snapshot.data}',
+                      style: const TextStyle(
+                        fontSize: 32.0,
+                      ),
+                    );
+                  }
+                }),
           ],
         ),
       ),
