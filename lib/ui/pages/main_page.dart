@@ -47,6 +47,7 @@ class MainPage extends StatelessWidget {
                   routeAddr: '/slideScreenPage', titleText: 'slideScreenPage'),
               BuildPushList(
                   routeAddr: '/counterPage', titleText: 'CounterPage'),
+              BuildPushList(routeAddr: '/BlocPage', titleText: 'BlocPage'),
             ],
           ),
         ),
