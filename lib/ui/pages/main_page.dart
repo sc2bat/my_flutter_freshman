@@ -13,36 +13,42 @@ class MainPage extends StatelessWidget {
         title: const Text('flutter 초급'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
-      body: const SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            BuildPushList(
-                routeAddr: '/animatedContainerPage',
-                titleText: 'AnimatedContainer'),
-            BuildPushList(
-                routeAddr: '/animatedOpacityPage',
-                titleText: 'AnimatedOpacity'),
-            BuildPushList(
-                routeAddr: '/navigationDrawerPage',
-                titleText: 'navigationDrawerPage'),
-            BuildPushList(
-                routeAddr: '/snackbarPage', titleText: 'snackbarPage'),
-            BuildPushList(
-                routeAddr: '/orientationBuilderPage',
-                titleText: 'orientationBuilderPage'),
-            BuildPushList(routeAddr: '/themePage', titleText: 'themePage'),
-            BuildPushList(
-                routeAddr: '/tabControllerPage',
-                titleText: 'TabControllerPage'),
-            BuildPushList(
-                routeAddr: '/formValidationPage',
-                titleText: 'FormValidationPage'),
-            BuildPushList(
-                routeAddr: '/dissmissiblePage', titleText: 'DissmissiblePage'),
-            BuildPushList(
-                routeAddr: '/slideScreenPage', titleText: 'slideScreenPage'),
-          ],
+      body: SingleChildScrollView(
+        child: SizedBox(
+          width: MediaQuery.of(context).size.width,
+          child: const Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              BuildPushList(
+                  routeAddr: '/animatedContainerPage',
+                  titleText: 'AnimatedContainer'),
+              BuildPushList(
+                  routeAddr: '/animatedOpacityPage',
+                  titleText: 'AnimatedOpacity'),
+              BuildPushList(
+                  routeAddr: '/navigationDrawerPage',
+                  titleText: 'navigationDrawerPage'),
+              BuildPushList(
+                  routeAddr: '/snackbarPage', titleText: 'snackbarPage'),
+              BuildPushList(
+                  routeAddr: '/orientationBuilderPage',
+                  titleText: 'orientationBuilderPage'),
+              BuildPushList(routeAddr: '/themePage', titleText: 'themePage'),
+              BuildPushList(
+                  routeAddr: '/tabControllerPage',
+                  titleText: 'TabControllerPage'),
+              BuildPushList(
+                  routeAddr: '/formValidationPage',
+                  titleText: 'FormValidationPage'),
+              BuildPushList(
+                  routeAddr: '/dissmissiblePage',
+                  titleText: 'DissmissiblePage'),
+              BuildPushList(
+                  routeAddr: '/slideScreenPage', titleText: 'slideScreenPage'),
+              BuildPushList(
+                  routeAddr: '/counterPage', titleText: 'CounterPage'),
+            ],
+          ),
         ),
       ),
     );

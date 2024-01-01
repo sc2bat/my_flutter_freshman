@@ -11,6 +11,7 @@ import 'package:my_flutter_freshman/ui/pages/slide_screen_page.dart';
 import 'package:my_flutter_freshman/ui/pages/snakbar_page.dart';
 import 'package:my_flutter_freshman/ui/pages/tab_controller_page.dart';
 import 'package:my_flutter_freshman/ui/pages/theme_page.dart';
+import 'package:my_flutter_freshman/ui/stream_page/counter_page.dart';
 
 final GoRouter router = GoRouter(routes: [
   GoRoute(
@@ -77,6 +78,12 @@ final GoRouter router = GoRouter(routes: [
     path: '/slideScreenPage',
     builder: (BuildContext context, GoRouterState state) {
       return const SlideScreenPage();
+    },
+  ),
+  GoRoute(
+    path: '/counterPage',
+    builder: (BuildContext context, GoRouterState state) {
+      return const CounterPage();
     },
   ),
 ]);
